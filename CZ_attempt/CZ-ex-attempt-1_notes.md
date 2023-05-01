@@ -55,3 +55,14 @@ current prompt: Update the model so that its outputs can be reproduced
  - perform a test that compares a previously-generated sample set, to a new one that uses the same seed and sample size
  - note that there is no simple solution for the statistical tests. The tolerance and sample size are subjective, and there is no guarantee that these tests will be able to distinguish intrinsic variation (i.e., different results of the same model) from variation produced by model error (i.e., similar results from an incorrect impelementation of the same model or from an entirely different model). However, it makes sense to ensure that the tolerance is such that the same model run with different rng seeds will (almost always) pass the tests. 
 
+### updates: 
+ - moved model input parameters (and test parameters) to defined variables
+ - added an output configuration file that stores the model input parameters, build info, and test results
+ - TODO: store a copy of the full model output for testing 
+ - TODO: read-in model parameters from input config file
+
+
+# Exercise 3: 
+
+current prompt: Write test cases that check if the model outputs are reproducible
+
