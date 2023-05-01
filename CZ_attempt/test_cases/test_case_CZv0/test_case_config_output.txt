@@ -1,0 +1,18 @@
+*** build info ***
+Operating System: Windows-10-10.0.19041-SP0
+Python version: 3.8.8 (default, Apr 13 2021, 15:08:03) [MSC v.1916 64 bit (AMD64)]
+
+** module versions **
+numpy version: 1.20.1
+pandas version: 1.2.4
+
+*** model input args ***
+parameter  value
+     seed      1
+n_samples     50
+  loc_val     10
+scale_val      1
+
+*** model info ***
+rng: Generator(PCG64)
+seed: 1

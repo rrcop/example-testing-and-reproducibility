@@ -7,7 +7,7 @@ prints out build info
 """
 
 #specify modules to import
-modules = ["platform", "numpy", "sys"] 
+modules = ["platform", "sys", "numpy", "pandas"] 
 
 
 for m in modules:
@@ -42,7 +42,7 @@ def print_platform_ver():
     
     
 def print_module_versions(module_set):
-    s_out = '\n\n**module versions**'
+    s_out = '\n\n** module versions **'
     for m in module_set:
         
         s = eval( m + '.__version__')

@@ -1,0 +1,5 @@
+parameter,value
+seed,1
+n_samples,50
+loc_val,10
+scale_val,1
