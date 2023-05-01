@@ -17,11 +17,13 @@ current prompt: Define a reproducible environment in which the model can run
 ### OS and IDE
 
  - Operating System: Windows 10 Version 21H2 (OS Build 19044.2846)
+ - python version: 3.8.8
  - IDE: Spyder version 4.2.5
 
 ### Packages
 
  - numpy 1.20.1
+ - pandas 1.2.4
 
 ### new code: 
 implemented some functions to output build info. The script 
