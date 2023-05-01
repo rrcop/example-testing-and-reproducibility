@@ -58,11 +58,28 @@ current prompt: Update the model so that its outputs can be reproduced
 ### updates: 
  - moved model input parameters (and test parameters) to defined variables
  - added an output configuration file that stores the model input parameters, build info, and test results
- - TODO: store a copy of the full model output for testing 
- - TODO: read-in model parameters from input config file
+ - built a test-case generator that stores a copy of the full model output for a given test case 
+ - removed hard-coded inputs and implemented read-in model parameters from input config file
 
 
 # Exercise 3: 
 
 current prompt: Write test cases that check if the model outputs are reproducible
+
+## CZ Implementation 
+
+### current solution: 
+ - produced a modified version of 
+```sh
+test.py
+```
+called 
+```sh
+generate_test_cases.py
+```
+which reads in a parameter file, generates model output, and then saves the input, output, and build data into a directory with a label for the test case (here I used CZv0). 
+- the test script now specifies a test case label (i.e., CZv0 as a string) which it uses to locate the list of parameters and test values for calling the model function and comparing the output generated to that of the test case. 
+- I implemented a new test case, which compares each element of the model output to the test case. A precision (decimal place) is specified, and if all value pairs [generated value, test case value] pass an equality check, then the test passes. This ensures that
+ -- the model being tested is specified by the same set of input arguments used in the test case 
+ -- the model generates the same output, identical to a specified precision.   
 
