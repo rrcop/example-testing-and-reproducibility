@@ -78,8 +78,8 @@ called
 generate_test_cases.py
 ```
 which reads in a parameter file, generates model output, and then saves the input, output, and build data into a directory with a label for the test case (here I used CZv0). 
-- the test script now specifies a test case label (i.e., CZv0 as a string) which it uses to locate the list of parameters and test values for calling the model function and comparing the output generated to that of the test case. 
-- I implemented a new test case, which compares each element of the model output to the test case. A precision (decimal place) is specified, and if all value pairs [generated value, test case value] pass an equality check, then the test passes. This ensures that
- -- the model being tested is specified by the same set of input arguments used in the test case 
- -- the model generates the same output, identical to a specified precision.   
+* the test script now specifies a test case label (i.e., CZv0 as a string) which it uses to locate the list of parameters and test values for calling the model function and comparing the output generated to that of the test case. 
+* I implemented a new test case, which compares each element of the model output to the test case. A precision (decimal place) is specified, and if all value pairs [generated value, test case value] pass an equality check, then the test passes. This ensures that
+  - the model being tested is specified by the same set of input arguments used in the test case 
+  - the model generates the same output, identical to a specified precision.   
 
